@@ -1,32 +1,33 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-@font-face{
+
+@font-face {
     font-family: "Soul Adventures Script";
     src: url(../assets/soulAdventuresScript/Soul\ Adventures\ Script.otf);
 }
 
-.grid-container{
+.grid-container {
     display: grid;
     grid-template-areas:
-    "header"
-    "cont"
-    "foot";
+        "header"
+        "cont"
+        "foot";
     height: 100vh;
     grid-template-rows: 100px 1fr 50px;
 }
 
-header{
+header {
     grid-area: header;
 }
 
-main{
-    grid-area: cont
+main {
+    grid-area: cont;
 }
 
-footer{
+footer {
     grid-area: foot;
     display: flex;
     justify-content: space-between;
@@ -36,21 +37,26 @@ footer{
 }
 
 /* Home */
-.body_index{
+.body_index {
     background-image: url(../assets/img/imgHome.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
-.title_index{
+
+.title_index {
     font-family: "Soul Adventures Script";
     font-size: 250px;
     font-weight: lighter;
-    display: inline-block;
-    margin-left: 900px;
-    margin-top: 125px;
 }
+
+.titleIndex_container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 100px;
+}
+
 /* Nav */
-nav{
+nav {
     max-width: 900px;
     margin: auto;
     font-size: 20px;
@@ -58,67 +64,81 @@ nav{
     font-weight: bolder;
     margin-top: 50px;
 }
-.menu_horizontal{
+
+.menu_horizontal {
     list-style: none;
     display: flex;
     justify-content: space-around;
 }
-.menu_horizontal > li > a{
-    display: block;
+
+.menu_horizontal>li>a {
+    display: flex;
+    flex-direction: column;
     padding: 15px 20px;
     color: #000;
     text-decoration: none;
     transition: color .4s ease;
 }
 
-.menu_horizontal > li a:hover{
+.menu_horizontal>li a:hover {
     color: rgba(44, 43, 43, 0.555);
 }
-.menu_vertical{
+
+.menu_vertical {
     position: absolute;
     display: none;
     list-style: none;
     width: 200px;
     color: #000;
     transition: color .4s ease;
-    z-index: 2;
+    z-index: 1;
 }
-.menu_horizontal li:hover .menu_vertical{
-    display: block;
+
+.menu_horizontal li:hover .menu_vertical {
+    display: flex;
+    flex-direction: column;
     transition: .5s ease;
 }
-.menu_vertical li:hover{
+
+.menu_vertical li:hover {
     color: rgba(44, 43, 43, 0.555);
 }
-.menu_vertical li a{
-    display: block;
+
+.menu_vertical li a {
+    display: flex;
+    flex-direction: column;
     color: #000;
     padding: 15px 15px 15px 20px;
     text-decoration: none;
-    /* background-color: rgba(243, 249, 249, 0.464); */
+    background-color: rgba(243, 249, 249, 0.464);
 }
+
 /* Footer */
 
-.footer__container{
+.footer__container {
     list-style: none;
     display: flex;
 }
-.footer__container li{
+
+.footer__container li {
     margin: 0 50px;
 }
-.footer__container a{
+
+.footer__container a {
     text-decoration: none;
     color: #fff;
 }
-.footer__container a i{
+
+.footer__container a i {
     font-size: 1.2rem;
     transition: color .4s ease;
 }
-.footer__container a:hover i{
+
+.footer__container a:hover i {
     color: rgb(103, 243, 236);
 }
 
-.bottom_footer h5{
+.bottom_footer h5 {
     font-size: 1rem;
     font-family: "Josefin Sans";
     font-weight: lighter;
@@ -126,70 +146,17 @@ nav{
     margin: 0 50px;
 }
 
-.footer-home{
+.footer-home {
     background-color: rgba(0, 0, 0, 0.5);
 }
-.footer-gallery{
+
+.footer-gallery {
     background-color: #000;
 }
 
-/* Gallery */
-.galeryContainer{
-    height: 700px;
-    overflow: hidden;
-    z-index: 5;
-}
-
-.itemGalery{
-    height: 700px;
-    position: relative;
-}
-
-.tarjetaGalery{
-    height: 100%;
-}
-
-.flechasGalery{
-    height: 100%;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.tarjetaGalery.elementoA{
-    background-image: url(../assets/img/landscapes/galleryLandscapersPortada.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.tarjetaGalery.elementoB{
-    background-image: url(../assets/img/petsPeople/galleryPeoplePetsPortada.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom;
-}
-.tarjetaGalery.elementoC{
-    background-image: url(../assets/img/details/galleryDetailsPortada.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.flechasGalery a i{
-    color: #fff;
-    font-size: 20px;
-    transition: .4s ease;
-}
-.flechasGalery a:hover i{
-    color: rgba(75, 75, 75, 0.5);
-}
 /* Details - Landscapes - Pets & People*/
 
-.photo-container{
+.photo-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 300px;
@@ -197,24 +164,26 @@ nav{
     grid-gap: 5px;
 }
 
-.photo-item img{
+.photo-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 /* About us */
-.body_about{
+.body_about {
     background-image: url(../assets/img/imgAboutUs.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    }
-.menu_horizontal_about{
+}
+
+.menu_horizontal_about {
     list-style: none;
     display: flex;
     justify-content: space-around;
 }
-.menu_horizontal_about > li > a{
+
+.menu_horizontal_about>li>a {
     display: block;
     padding: 15px 20px;
     color: #fff;
@@ -222,10 +191,11 @@ nav{
     transition: color .4s ease;
 }
 
-.menu_horizontal_about > li a:hover{
+.menu_horizontal_about>li a:hover {
     color: rgba(99, 98, 98, 0.555);
 }
-.menu_vertical_about{
+
+.menu_vertical_about {
     position: absolute;
     display: none;
     list-style: none;
@@ -234,20 +204,24 @@ nav{
     transition: color .4s ease;
     z-index: 2;
 }
-.menu_horizontal_about li:hover .menu_vertical_about{
+
+.menu_horizontal_about li:hover .menu_vertical_about {
     display: block;
     transition: .5s ease;
 }
-.menu_vertical_about li:hover{
+
+.menu_vertical_about li:hover {
     color: rgba(99, 98, 98, 0.555);
 }
-.menu_vertical_about li a{
+
+.menu_vertical_about li a {
     display: block;
     color: #fff;
     padding: 15px 15px 15px 20px;
     text-decoration: none;
 }
-.about_title{
+
+.about_title {
     font-family: "Soul Adventures Script";
     font-size: 150px;
     font-weight: lighter;
@@ -256,7 +230,8 @@ nav{
     margin-top: 125px;
     color: #fff;
 }
-.about_paragraph{
+
+.about_paragraph {
     color: #fff;
     font-size: 20px;
     font-family: "Josefin Sans";
@@ -265,8 +240,9 @@ nav{
     padding-left: 50px;
     padding-right: 700px;
 }
+
 /* Contact */
-.contact{
+.contact {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -274,7 +250,8 @@ nav{
     margin-bottom: 20px;
     margin-top: 20px;
 }
-.contact__image-wrapper img{
+
+.contact__image-wrapper img {
     min-width: 786px;
     max-width: 900px;
     height: 100%;
@@ -283,33 +260,39 @@ nav{
     align-items: center;
 }
 
-.contact__right-side{
+.contact__right-side {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding: 0 7.3% 0 4.7%;
     font-family: "Josefin Sans";
 }
-.contact__title{
+
+.contact__title {
     font-size: 100px;
     font-weight: 400;
     margin-bottom: 50px;
 }
-.contact__form-wrapper, .contact__input-line{
-display: flex;
-justify-content: center;
-align-items: flex-start;
-flex-direction: column;
-width: 100%;
+
+.contact__form-wrapper,
+.contact__input-line {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
 }
-.contact__input-line{
+
+.contact__input-line {
     margin-bottom: 45px;
 }
-.contact__label{
+
+.contact__label {
     font-size: 18px;
     font-weight: 600;
 }
-.contact__input{
+
+.contact__input {
     height: 30px;
     outline: none;
     padding: 5px 0;
@@ -321,7 +304,8 @@ width: 100%;
     color: #121212;
     background-color: transparent;
 }
-.contact__input-line textarea{
+
+.contact__input-line textarea {
     height: 30px;
     outline: none;
     padding: 5px 0;
@@ -334,20 +318,78 @@ width: 100%;
     background-color: transparent;
     resize: none;
 }
-.contact__submit-button{
+
+.contact__submit-button {
     padding: 18px 55px;
     background-color: #121212;
     border-radius: 50px;
-    color:#f2f2f2;
+    color: #f2f2f2;
     font-family: "Josefin Sans";
     font-weight: 600;
     border: none;
     font-size: 18px;
     transition: 0.4s ease;
 }
-.contact__submit-button:hover{
+
+.contact__submit-button:hover {
     background-color: #535353;
 }
 
+/* Media Queries */
 
+@media (min-width:768px) {
+    .navbar.navbar-dark.bg-dark.fixed-top {
+        visibility: hidden;
+    }
+}
 
+@media (max-width:768px) {
+    .navbar.navbar-dark.bg-dark.fixed-top {
+        visibility: visible;
+    }
+}
+
+@media(max-width:768px) {
+    .photo-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: 300px;
+        padding: 10px;
+        grid-gap: 5px;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    body_index {
+        background-image: url(../assets/img/imgHomePhone.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .title_index {
+        font-size: 100px;
+    }
+
+    .titleIndex_container {
+        justify-content: center;
+        margin: 20px;
+    }
+
+}
+@media(max-width:915px){
+    .title_index {
+        font-size: 150px;
+    }
+    .titleIndex_container {
+        justify-content: center;
+        margin: 50px;
+    }
+}
