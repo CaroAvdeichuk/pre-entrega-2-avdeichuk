@@ -47,6 +47,7 @@ footer {
     font-family: "Soul Adventures Script";
     font-size: 250px;
     font-weight: lighter;
+    transition: 0.5 ease-in-out;
 }
 
 .titleIndex_container {
@@ -84,7 +85,7 @@ nav {
     color: rgba(44, 43, 43, 0.555);
 }
 
-.menu_vertical {
+/* .menu_vertical {
     position: absolute;
     display: none;
     list-style: none;
@@ -111,7 +112,7 @@ nav {
     padding: 15px 15px 15px 20px;
     text-decoration: none;
     background-color: rgba(243, 249, 249, 0.464);
-}
+} */
 
 /* Footer */
 
@@ -195,7 +196,7 @@ nav {
     color: rgba(99, 98, 98, 0.555);
 }
 
-.menu_vertical_about {
+/* .menu_vertical_about {
     position: absolute;
     display: none;
     list-style: none;
@@ -219,16 +220,18 @@ nav {
     color: #fff;
     padding: 15px 15px 15px 20px;
     text-decoration: none;
+} */
+
+section .about{
+    display: flex;
 }
 
 .about_title {
     font-family: "Soul Adventures Script";
     font-size: 150px;
     font-weight: lighter;
-    display: inline-block;
-    margin-left: 350px;
-    margin-top: 125px;
     color: #fff;
+    margin:50px
 }
 
 .about_paragraph {
@@ -236,9 +239,7 @@ nav {
     font-size: 20px;
     font-family: "Josefin Sans";
     text-align: left;
-    margin-top: 100px;
-    padding-left: 50px;
-    padding-right: 700px;
+    margin: 50px;
 }
 
 /* Contact */
@@ -335,61 +336,70 @@ nav {
     background-color: #535353;
 }
 
-    /* Media Queries */
+/* Media Queries */
 
-    @media (min-width:768px) {
-        .navbar.navbar-dark.bg-dark.fixed-top {
-            visibility: hidden;
-        }
+@media (min-width:768px) {
+    .navbar.navbar-dark.bg-dark.fixed-top {
+        visibility: hidden;
     }
-    
-    @media (max-width:768px) {
-        .navbar.navbar-dark.bg-dark.fixed-top {
-            visibility: visible;
-        }
+}
+
+@media (max-width:768px) {
+    .navbar.navbar-dark.bg-dark.fixed-top {
+        visibility: visible;
     }
-    
-    @media(max-width:768px) {
-        .photo-container {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            grid-auto-rows: 300px;
-            padding: 10px;
-            grid-gap: 5px;
-        }
-    
-        .contact {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: #fff;
-            margin-bottom: 20px;
-            margin-top: 20px;
-        }
-    
-        body_index {
-            background-image: url(../assets/img/imgHomePhone.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-    
-        .title_index {
-            font-size: 100px;
-        }
-    
-        .titleIndex_container {
-            justify-content: center;
-            margin: 20px;
-        }
-    
+}
+
+@media(max-width:768px) {
+    .photo-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: 300px;
+        padding: 10px;
+        grid-gap: 5px;
     }
-    @media(max-width:915px){
-        .title_index {
-            font-size: 150px;
-        }
-        .titleIndex_container {
-            justify-content: center;
-            margin: 50px;
-        }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        margin-bottom: 20px;
+        margin-top: 20px;
     }
+
+    body_index {
+        background-image: url(../assets/img/imgHomePhone.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .title_index {
+        font-size: 100px;
+        color: #fff;
+        transition: 0.5 ease-in-out;
+    }
+
+    .titleIndex_container {
+        justify-content: flex-start;
+    }
+
+    .body_about {
+        background-image: url(../assets/img/imgAboutUsPhone.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media(max-width:915px) and (min-width:769px){
+    .title_index {
+        font-size: 175px;
+        color: #fff;
+        transition: 0.5s ease-in-out;
+    }
+
+    .titleIndex_container {
+        justify-content: center;
+    }
+}
