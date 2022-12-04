@@ -33,126 +33,39 @@ footer {
     justify-content: space-between;
     align-items: center;
     width: 100vw;
-    color: #fff;
 }
-
 /* Home */
-.body_index {
+.bg-imgIndex {
     background-image: url(../assets/img/imgHome.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
+}
+
+.title_container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0 100px;
 }
 
 .title_index {
     font-family: "Soul Adventures Script";
-    font-size: 250px;
+    font-size: 25rem;
     font-weight: lighter;
-    transition: 0.5 ease-in-out;
+    color: rgb(103 243 236 / 75%);
 }
-
-.titleIndex_container {
-    display: flex;
-    justify-content: flex-end;
-    margin: 100px;
-}
-
-/* Nav */
-nav {
-    max-width: 900px;
-    margin: auto;
-    font-size: 20px;
+.subtitle_index{
     font-family: "Josefin Sans";
-    font-weight: bolder;
-    margin-top: 50px;
-}
-
-.menu_horizontal {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-}
-
-.menu_horizontal>li>a {
-    display: flex;
-    flex-direction: column;
-    padding: 15px 20px;
-    color: #000;
-    text-decoration: none;
-    transition: color .4s ease;
-}
-
-.menu_horizontal>li a:hover {
-    color: rgba(44, 43, 43, 0.555);
-}
-
-/* .menu_vertical {
-    position: absolute;
-    display: none;
-    list-style: none;
-    width: 200px;
-    color: #000;
-    transition: color .4s ease;
-    z-index: 1;
-}
-
-.menu_horizontal li:hover .menu_vertical {
-    display: flex;
-    flex-direction: column;
-    transition: .5s ease;
-}
-
-.menu_vertical li:hover {
-    color: rgba(44, 43, 43, 0.555);
-}
-
-.menu_vertical li a {
-    display: flex;
-    flex-direction: column;
-    color: #000;
-    padding: 15px 15px 15px 20px;
-    text-decoration: none;
-    background-color: rgba(243, 249, 249, 0.464);
-} */
-
-/* Footer */
-
-.footer__container {
-    list-style: none;
-    display: flex;
-}
-
-.footer__container li {
-    margin: 0 50px;
-}
-
-.footer__container a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.footer__container a i {
-    font-size: 1.2rem;
-    transition: color .4s ease;
-}
-
-.footer__container a:hover i {
-    color: rgb(103, 243, 236);
-}
-
-.bottom_footer h5 {
-    font-size: 1rem;
-    font-family: "Josefin Sans";
+    font-size: 5rem;
     font-weight: lighter;
-    color: rgb(103, 243, 236);
-    margin: 0 50px;
+    color: rgb(255, 255, 255);
 }
-
-.footer-home {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.footer-gallery {
-    background-color: #000;
+/*Gallery*/
+h5{
+    font-size: 2rem;
+    font-family: "Josefin Sans";
+    font-weight: 600;
 }
 
 /* Details - Landscapes - Pets & People*/
@@ -172,108 +85,42 @@ nav {
 }
 
 /* About us */
-.body_about {
+.bg-imgAbout {
     background-image: url(../assets/img/imgAboutUs.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-.menu_horizontal_about {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-}
-
-.menu_horizontal_about>li>a {
-    display: block;
-    padding: 15px 20px;
-    color: #fff;
-    text-decoration: none;
-    transition: color .4s ease;
-}
-
-.menu_horizontal_about>li a:hover {
-    color: rgba(99, 98, 98, 0.555);
-}
-
-/* .menu_vertical_about {
-    position: absolute;
-    display: none;
-    list-style: none;
-    width: 200px;
-    color: #fff;
-    transition: color .4s ease;
-    z-index: 2;
-}
-
-.menu_horizontal_about li:hover .menu_vertical_about {
-    display: block;
-    transition: .5s ease;
-}
-
-.menu_vertical_about li:hover {
-    color: rgba(99, 98, 98, 0.555);
-}
-
-.menu_vertical_about li a {
-    display: block;
-    color: #fff;
-    padding: 15px 15px 15px 20px;
-    text-decoration: none;
-} */
-
-section .about{
-    display: flex;
+    background-position: center;
 }
 
 .about_title {
     font-family: "Soul Adventures Script";
-    font-size: 150px;
+    font-size: 15rem;
     font-weight: lighter;
     color: #fff;
-    margin:50px
+    margin: 0 50px
 }
 
-.about_paragraph {
-    color: #fff;
-    font-size: 20px;
-    font-family: "Josefin Sans";
-    text-align: left;
-    margin: 50px;
-}
 
 /* Contact */
 .contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 5px;
 }
 
 .contact__image-wrapper img {
-    min-width: 786px;
-    max-width: 900px;
-    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    size: cover;
 }
 
 .contact__right-side {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 0 7.3% 0 4.7%;
+    padding: 0 5%;
     font-family: "Josefin Sans";
 }
 
-.contact__title {
-    font-size: 100px;
-    font-weight: 400;
-    margin-bottom: 50px;
-}
 
 .contact__form-wrapper,
 .contact__input-line {
@@ -282,14 +129,14 @@ section .about{
     align-items: flex-start;
     flex-direction: column;
     width: 100%;
-}
+} 
 
 .contact__input-line {
     margin-bottom: 45px;
 }
 
 .contact__label {
-    font-size: 18px;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
@@ -328,26 +175,12 @@ section .about{
     font-family: "Josefin Sans";
     font-weight: 600;
     border: none;
-    font-size: 18px;
+    font-size: 1.2rem;
     transition: 0.4s ease;
 }
 
 .contact__submit-button:hover {
     background-color: #535353;
-}
-
-/* Media Queries */
-
-@media (min-width:768px) {
-    .navbar.navbar-dark.bg-dark.fixed-top {
-        visibility: hidden;
-    }
-}
-
-@media (max-width:768px) {
-    .navbar.navbar-dark.bg-dark.fixed-top {
-        visibility: visible;
-    }
 }
 
 @media(max-width:768px) {
@@ -357,49 +190,5 @@ section .about{
         grid-auto-rows: 300px;
         padding: 10px;
         grid-gap: 5px;
-    }
-
-    .contact {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #fff;
-        margin-bottom: 20px;
-        margin-top: 20px;
-    }
-
-    body_index {
-        background-image: url(../assets/img/imgHomePhone.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    .title_index {
-        font-size: 100px;
-        color: #fff;
-        transition: 0.5 ease-in-out;
-    }
-
-    .titleIndex_container {
-        justify-content: flex-start;
-    }
-
-    .body_about {
-        background-image: url(../assets/img/imgAboutUsPhone.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-}
-
-@media(max-width:915px) and (min-width:769px){
-    .title_index {
-        font-size: 175px;
-        color: #fff;
-        transition: 0.5s ease-in-out;
-    }
-
-    .titleIndex_container {
-        justify-content: center;
     }
 }
